@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.7-slim
 
 RUN pip3 install fastapi uvicorn nltk
 COPY install_dictionary.py /install_dictionary.py
