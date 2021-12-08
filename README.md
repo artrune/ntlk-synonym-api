@@ -12,3 +12,6 @@ Open a terminal on the directory containing the repository files and run
 * docker images rm synonym:1
 
 
+#Other synonym api
+
+http://sesat.fdi.ucm.es:8080/servicios/rest/sinonimos/json/arbol
