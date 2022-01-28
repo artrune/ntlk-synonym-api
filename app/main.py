@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import uvicorn
 from nltk.corpus import wordnet
+import traceback
 
 app = FastAPI(docs_url="/")
 
@@ -13,8 +14,8 @@ async def spa_synonym(word:str):
             for name in syn.lemma_names('spa'):
                 results.append(name)
         return results
-        pass
-    except:
+    except BaseException as ex:
+        print(traceback.format_exc())
         return []
 
 @app.get("/en")
